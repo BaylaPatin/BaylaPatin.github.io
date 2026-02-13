@@ -16,7 +16,7 @@
         <h1>Will You Be My Valentine?</h1>
 
         <div class="photo-placeholder">
-            <p>Your Photo Here</p>
+            <img src="vday.jpg" alt="">
         </div>
 
         <div class="buttons">
@@ -24,6 +24,22 @@
             <button id="noBtn" class="btn no-btn">No</button>
         </div>
     </div>
+
+    <!-- Mini Game Overlay -->
+    <div id="gameOverlay" class="game-overlay">
+        <div id="gameMessage" class="game-message">You have to try harder than that! Use your mouse to catch the heart!
+        </div>
+        <div id="score" class="game-message" style="font-size: 1.5rem;">Score: 0/5</div>
+        <div id="heartTarget" class="heart-target">❤️</div>
+
+        <!-- Wordle Container -->
+        <div id="wordleGame" class="wordle-game">
+            <h2 style="color: white; font-family: 'Pacifico'; margin-bottom: 1rem;">Guess the Word!</h2>
+            <div id="wordleGrid" class="wordle-grid"></div>
+            <div id="keyboard" class="keyboard"></div>
+        </div>
+    </div>
+
     <script src="valentine.js"></script>
 </body>
 
