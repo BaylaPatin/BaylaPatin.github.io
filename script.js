@@ -40,6 +40,39 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Project Accordion (one open at a time)
+    const projectHeaders = document.querySelectorAll('.project-header');
+
+    function setPanelOpen(header, open) {
+        const item = header.closest('.project-item');
+        const panel = document.getElementById(header.getAttribute('aria-controls'));
+        header.setAttribute('aria-expanded', open ? 'true' : 'false');
+        item.classList.toggle('is-open', open);
+        // inert keeps the collapsed panel out of tab order and the a11y tree
+        if (open) {
+            panel.removeAttribute('inert');
+        } else {
+            panel.setAttribute('inert', '');
+        }
+    }
+
+    projectHeaders.forEach(header => {
+        header.addEventListener('click', () => {
+            const isOpen = header.getAttribute('aria-expanded') === 'true';
+            if (isOpen) {
+                setPanelOpen(header, false);
+            } else {
+                // Accordion: close any other open panel first
+                projectHeaders.forEach(other => {
+                    if (other !== header) {
+                        setPanelOpen(other, false);
+                    }
+                });
+                setPanelOpen(header, true);
+            }
+        });
+    });
+
     // Simple reveal on scroll animation
     const observerOptions = {
         threshold: 0.1
@@ -55,7 +88,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    document.querySelectorAll('section').forEach(section => {
+    // Only top-level sections — not the nested .project-panel <section>s
+    document.querySelectorAll('body > section').forEach(section => {
         section.style.opacity = '0';
         section.style.transform = 'translateY(20px)';
         section.style.transition = 'all 0.6s ease-out';

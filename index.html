@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -58,13 +58,60 @@
 
     <!--    Hero Section    -->
     <section id="hero">
-        <div class="container hero-content">
-            <span class="greeting">Hello, I'm</span>
-            <h1>Bayla Patin</h1>
-            <p class="subtitle">I am a <span class="typing-text"></span></p>
-            <div class="cta-buttons">
-                <a href="#projects" class="btn primary">View Work</a>
-                <a href="assets/documents/resume-BP.pdf" target="_blank" class="btn secondary">Resume</a>
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <span class="greeting">Hello, I'm</span>
+                <h1>Bayla</h1>
+                <p class="subtitle">I am a <span class="typing-text"></span></p>
+                <p class="hero-bio">CS student building embedded systems, mobile apps, and developer tools.</p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn primary">View Work</a>
+                    <a href="assets/documents/resume-BP.pdf" target="_blank" class="btn secondary">Resume</a>
+                </div>
+                <div class="hero-socials">
+                    <a href="https://github.com/BaylaPatin" aria-label="GitHub">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                            </path>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
+                    <a href="#contact" aria-label="Email">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                            <path d="m22 7-10 5L2 7"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="terminal-card" aria-hidden="true">
+                    <div class="terminal-bar">
+                        <span class="term-dot red"></span>
+                        <span class="term-dot yellow"></span>
+                        <span class="term-dot green"></span>
+                        <span class="term-title">bayla@portfolio ~</span>
+                    </div>
+                    <div class="terminal-body">
+                        <p><span class="term-prompt">$</span> whoami</p>
+                        <p class="term-out">bayla_patin</p>
+                        <p><span class="term-prompt">$</span> cat stack.txt</p>
+                        <p class="term-out">Flutter · Node.js · Python · C++ · Arduino</p>
+                        <p><span class="term-prompt">$</span> status --now</p>
+                        <p class="term-out"><span class="term-ok">●</span> Open to opportunities</p>
+                        <p class="term-line"><span class="term-prompt">$</span> <span class="term-cursor"></span></p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -88,65 +135,111 @@
     <section id="projects">
         <div class="container">
             <h2 class="section-title">Featured Projects</h2>
-            <div class="projects-grid">
-                <!-- Project Card 1 -->
-                <article class="project-card">
-                    <div class="project-image">
-                        <img src="assets/images/arduinoMP3.jpg" alt="Arduino MP3 Player with LED volume indicator">
-                    </div>
-                    <div class="project-info">
-                        <h3>MP3 Player</h3>
-                        <p>Arduino MP3 player with LED volume indicator.</p>
-                        <div class="tags">
-                            <span>ArduinoIDE</span>
-                            <span>Microcontroller</span>
-                            <span>Electronics</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="assets/videos/arduino-MP3-player.mp4" target="_blank">Demo</a>
-                            <a href="#" target="_blank">Code</a>
-                        </div>
-                    </div>
-                </article>
+            <div class="projects-list">
 
-                <!-- Project Card 2 -->
-                <article class="project-card">
-                    <div class="project-image">
-                        <img src="assets/images/lectureLift.jpg" alt="LectureLift">
-                    </div>
-                    <div class="project-info">
-                        <h3>LectureLift</h3>
-                        <p>A flutter app for students to get rides from other students to and from classes.</p>
-                        <div class="tags">
-                            <span>Flutter</span>
-                            <span>Dart</span>
-                            <span>Node.js</span>
+                <!-- Project 1 -->
+                <div class="project-item">
+                    <button class="project-header" aria-expanded="false" aria-controls="proj-mp3">
+                        <span class="project-index">01</span>
+                        <span class="project-title-group">
+                            <span class="project-name">MP3 Player</span>
+                            <span class="project-tools">ArduinoIDE · Microcontroller · Electronics</span>
+                        </span>
+                        <span class="project-chevron" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </span>
+                    </button>
+                    <section class="project-panel" id="proj-mp3" inert>
+                        <div class="project-panel-inner">
+                            <p class="project-desc">An Arduino-based MP3 player that reads tracks from an SD card and
+                                drives playback through a hardware amplifier, with an LED bar that visualizes the
+                                current volume level in real time. Built to explore embedded audio and physical
+                                interface design.</p>
+                            <div class="project-gallery">
+                                <div class="gallery-media">
+                                    <img src="assets/images/arduinoMP3.jpg"
+                                        alt="Arduino MP3 Player with LED volume indicator">
+                                </div>
+                                <div class="gallery-placeholder"><span>Add photo</span></div>
+                            </div>
+                            <div class="project-links">
+                                <a href="assets/videos/arduino-MP3-player.mp4" target="_blank">Demo ↗</a>
+                                <a href="#" target="_blank">Code ↗</a>
+                            </div>
                         </div>
-                        <div class="project-links">
-                            <a href="#" target="_blank">Demo</a>
-                            <a href="https://github.com/BaylaPatin/LectureLift" target="_blank">Code</a>
-                        </div>
-                    </div>
-                </article>
+                    </section>
+                </div>
 
-                <!-- Project Card 3 -->
-                <article class="project-card">
-                    <div class="project-image">
-                        <div class="placeholder-img"></div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Database Project</h3>
-                        <p>Command line interface that interacts with a database.</p>
-                        <div class="tags">
-                            <span>SQLite</span>
-                            <span>C++</span>
+                <!-- Project 2 -->
+                <div class="project-item">
+                    <button class="project-header" aria-expanded="false" aria-controls="proj-lecturelift">
+                        <span class="project-index">02</span>
+                        <span class="project-title-group">
+                            <span class="project-name">LectureLift</span>
+                            <span class="project-tools">Flutter · Dart · Node.js</span>
+                        </span>
+                        <span class="project-chevron" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </span>
+                    </button>
+                    <section class="project-panel" id="proj-lecturelift" inert>
+                        <div class="project-panel-inner">
+                            <p class="project-desc">A cross-platform mobile app that connects students who need rides to
+                                and from class with peers already making the trip. Built with Flutter on the front end
+                                and a Node.js backend to handle matching, scheduling, and user accounts.</p>
+                            <div class="project-gallery">
+                                <div class="gallery-placeholder"><span>Add photo</span></div>
+                                <div class="gallery-placeholder"><span>Add photo</span></div>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" target="_blank">Demo ↗</a>
+                                <a href="https://github.com/BaylaPatin/LectureLift" target="_blank">Code ↗</a>
+                            </div>
                         </div>
-                        <div class="project-links">
-                            <a href="#" target="_blank">Demo</a>
-                            <a href="#" target="_blank">Code</a>
+                    </section>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-item">
+                    <button class="project-header" aria-expanded="false" aria-controls="proj-database">
+                        <span class="project-index">03</span>
+                        <span class="project-title-group">
+                            <span class="project-name">Database Project</span>
+                            <span class="project-tools">SQLite · C++</span>
+                        </span>
+                        <span class="project-chevron" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </span>
+                    </button>
+                    <section class="project-panel" id="proj-database" inert>
+                        <div class="project-panel-inner">
+                            <p class="project-desc">A command-line interface written in C++ that lets users query and
+                                manipulate a SQLite database directly from the terminal. Focused on clean data handling
+                                and building a fast, keyboard-driven workflow for working with structured records.</p>
+                            <div class="project-gallery">
+                                <div class="gallery-placeholder"><span>Add photo</span></div>
+                                <div class="gallery-placeholder"><span>Add photo</span></div>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" target="_blank">Demo ↗</a>
+                                <a href="#" target="_blank">Code ↗</a>
+                            </div>
                         </div>
-                    </div>
-                </article>
+                    </section>
+                </div>
+
             </div>
         </div>
     </section>
